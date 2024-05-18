@@ -2,8 +2,9 @@
 
 ## Project Overview
 
-AtliQ Hardware is growing rapidly in the recent years, and they have decided to implement the data analytics using PowerBi in their company for the first time to surpass their competitors in the market and to make data driven decisions. 
-[Live Report Link]()
+AtliQ Hardware has been growing rapidly in recent years, and they have decided to implement data analytics using PowerBi in their company for the first time to surpass their competitors in the market and to make data-driven decisions. 
+- [Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiODA5NWEzZTItMDZjOS00MzBkLWFiYTItOTRlODZhYjNjN2ExIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9&pageName=ReportSection870fd0166929d0c75b45)
+
 
 ## Tech stacks
 
@@ -41,134 +42,91 @@ AltiQ Hardware is a company that has grown rapidly in recent years, and opened b
 - Direct
 - Distributors
 
-Recently the company has faced a unforeseen loss by opening store in Latin America based on the surveys, intuition and some excel analysis and also the company’s competitors has handful of analytics team to perform analysis and make data driven decision. So, the AltiQ hardware has no other option other than building their analytics team for data driven insights and decisions in the future to survive better in the industry. 
+Recently the company has faced significant loss by opening a store in Latin America based on surveys, intuition, and some Excel analysis. Also, the company’s competitors have employed an analytics team to perform analysis and make data-driven decisions. So, AltiQ Hardware has decided to invest in an analytics team for data-driven insights and decisions in the future to survive better in the industry. 
 
 
 ### Dataset **Understanding.**
 
-Understanding what data is available will be more helpful while doing analysis. before jumping on to the analysis get good understanding of what are data available.
+We are pulling data from **2 sources** : MySQL and Excel
 
-Dimension table : It will have the static data like details of customer and products
-
-Fact table : It will have the data about the transactions  
-
+We have 2 databases containing the following tables: 
 - gdb041:
     - dim_customer
-        - **27** distinct markets (ex India, USA, spain)
-        - **75** distinct customers thorough out the market
+        - **27** distinct markets (ex India, USA, Spain)
+        - **75** distinct customers throughout the market
         - **2** types of platforms
             - Brick & Motors - Physical/offline store
-            - E-commerce - Online Store (Amazon, flipkart)
+            - E-commerce - Online Store (Amazon, Flipkart)
         - Three channels
             - Retailer
             - Direct
             - Distributors
     - dim_market
-        - **27** distinct markets (ex India, USA, spain)
+        - **27** distinct markets (ex India, USA, Spain)
         - 7 sub-zones
-        - 4 regions
-            - APAC
-            - EU
-            - nan
-            - LATAM
+        - 4 regions 
     - dim_product
         - Divisions
             - P & A
-                - Peripherals
-                - Accessories
             - PC
-                - Notebook
-                - Desktop
             - N & S
-                - Networking
-                - Storage
-        - There are 14 different categories, Like Internal HDD, keyboard
-        - There are different variants available for the same product
     - fact_forecast_monthly
-        - This table is used to forecast the customer’s need in advance, which can help in
-            - Higher customer satisfaction
-            - Reduced cost in warehouses for storage purpose
-        - The table is denormalized by data engineering team, as it is a data warehouse which is aimed to be used for analytical work.
-        - All the date of the month will be replaced by the start date of the month
-        - It will have all the column names and in the end it will have the forecast quantity need of the customer
+        - This table is used to forecast the customer’s needs in advance
     - fact_sales_monthly
-        - This table is more or less is same as fact_forecase_monthly table, but the last column has the value of sold quantity instead of forecast value.
+        - This table contains the sold quantity.
 - gdb056
     - freight_cost
-        - This table has details of travel cost and other cost for each market with fiscal year
     - gross_price
-        - Has the details of gross prices with product code
     - manufacturing_cost
-        - Has the details of manufacturing cost with product code with year
     - Pre_invoice_dedutions
-        - Has the details of pre invoice deductions percentage for each cutomer with year
     - Post_invoice_deductions
-        - Post invoice deductions and other deductions details
 
-## Importing data into PowerBi
+We are importing 3 Excel files as well:
+- MarketShare: AtliQ and its competitors market share
+- Operational Expenses: Ads & promotions and other expenses percentage per market
+- targets: AtliQ's NS, GM, NP target data
 
-- As the database is MySQL in this project, we need to import the datasets from Mysql database to PowerBi by providing the Database access credential
 
 ## Data Model
 
-- Data modeling plays a vital role and is considered as the basement of report. All the visuals will be build upon the data model.
-- Poor data modeling affects the over all performance of the report.
-- Following Good practices of data modeling is must. Refer this page to get to know the good practices [Blog](https://addendanalytics.com/blog/data-modelling-best-practices/)
-- In this project, we have followed Snowfall data modeling method.
+We have built a Snowfall data model for this project
 
-<img src="https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Data_model.png" class="center">
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/018e042f-734b-4d8f-8fce-b19ce666eb21)
 
-### Dashboard designing
 
-Based on the mock ups received as requirement, the team will start designing the visuals and create measure as and when required
+## Dashboards
 
-## Home view
+### Home view
 
-In Home view, all the views button will be available. User will land on specific view page by clicking the button 
-
-- Info
-- Finance View
-- Sales View
-- Marketing View
-- Supply chain View
-- Executive View
-- Products
-- Support
-
-## Overall Report
-
-![Overall Report.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Overall.gif)
-
-## Info Page
-
-![Info.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Info.gif)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/dac388a6-342e-4632-b91f-340e8197ebda)
 
 ## Finance View
 
-![Finace.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Finace.gif)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/0c33b9af-f31d-4272-a774-3152d1152875)
+
 ## Sales View
 
-![Sales.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Sales.gif)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/dd74e4ae-489e-4525-a53c-74f2698143f0)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/9577e37a-523b-4164-94d4-f71af43b15d1)
+
 
 ## Marketing View
 
-![Marketing.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Marketing.gif)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/5fdf7925-58aa-4f5a-b640-e7ec0e58c650)
 
 ## Supply chain View
 
-![Supply chain.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/supply%20chain.gif)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/99a36b9d-31cf-4cde-b121-6a426421960a)
 
 ## Executive View
 
-![Executive.gif](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Executive.gif)
-
-## Products
-
-![Products](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Resources/Products%20View.gif)
-
-you can find the full report file here : [Report](https://github.com/Naveen-S6/Business_Insights_360/blob/main/Report/360.pbix)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/f2099ed8-2a30-4da4-b425-2307c0939e2a)
 
 
-## Project Outcome
+## Key Insights
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/57c4eb4e-a4c8-45fa-ab20-8fb8c61a1545)
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/7a2f4c8c-b33e-4570-a079-2f47bcef3520)
 
-By using this report, decisions can be taken based on the data. Further it will help in answering n number of why questions based on the situations.
+## Recommendations
+![image](https://github.com/Kanikamittal99/Business_Insights_360/assets/32505627/b9c24053-0ff3-417b-820c-2b0e06203c45)
+
