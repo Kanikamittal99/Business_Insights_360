@@ -6,6 +6,11 @@ AtliQ Hardware has been growing rapidly in recent years, and they have decided t
 - [Live Report Link](https://app.powerbi.com/view?r=eyJrIjoiODA5NWEzZTItMDZjOS00MzBkLWFiYTItOTRlODZhYjNjN2ExIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9&pageName=ReportSection870fd0166929d0c75b45)
 -  [Video Presentation](https://www.linkedin.com/feed/update/urn:li:activity:7197652297210871809/)
 
+## Objectives/Goals
+- Enhance Transparency and enable data-driven decision-making
+- Targetting 10% increase in profits
+
+
 
 ## Tech stacks
 
